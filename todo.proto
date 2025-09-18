@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package todoPackage;
+
+service Todo {
+
+    rpc createTodo() returns (TodoItem)
+}
+
+message TodoItem {
+    int32 id = 1;
+    string text = 2;
+}
