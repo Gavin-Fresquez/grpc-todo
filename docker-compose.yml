@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  server:
+    build: .
+    container_name: grpc-todo-server
+    ports:
+      - "40000:40000"
+    networks:
+      - grpc-network
+    restart: unless-stopped
+
+networks:
+  grpc-network:
+    driver: bridge
